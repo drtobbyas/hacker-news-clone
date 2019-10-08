@@ -1,0 +1,78 @@
+.items {
+  li {
+    display: flex;
+    justify-content: flex-start;
+    // display: flex;
+    // justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .ranking {
+      margin: 3px;
+    }
+    .upvote {
+      margin: 3px 3px 3px 0;
+      
+      // background-size: 13px;
+      // background-image: url("/assets/upvotearrow.gif");
+      cursor: pointer;
+      img {
+        width: 13px;
+        max-width: 13px;
+        height: 13px;
+        max-height: 13px;
+      }
+      
+    }
+    // span {
+    //   .upvote {
+    //     // margin-left: 5px;
+    //     // display: block;
+    //     margin: 3px 6px 6px 2px;
+    //     min-width: 13px;
+    //     width: 13px;
+    //     min-height: 13px;
+    //     height: 13px;
+    //     background-image: url("/assets/upvotearrow.gif");
+    //   }
+    //   span {
+    //     // margin: 5px;
+    //   }
+    }
+    .details {
+      small {
+        margin-bottom: 6px;
+      }
+
+      small a, span, span a {
+        color: #828282;
+        text-align: left;
+      }
+      .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 3px;
+      }
+
+      .info {
+        display: block;
+      }
+      // margin-left: 5px;
+
+      h4 {
+        margin-bottom: 6px;
+      a {
+        color: #000000;
+      }
+
+    }
+      .comments {
+       white-space: nowrap;
+
+      }
+      // line-height: 14px;
+      // font-size: 18px;
+      
+    }
+  }
+
