@@ -46,11 +46,21 @@
     margin: auto 4px;
   }
 }
+app-item {
+  // background-color: #828282;
+}
 
 @media screen and (min-width: 750px) {
   .header > span > span {
     display: flex;
     align-self: center;
   }
-
+  .container {
+   display: flex;
+   flex-direction: column;
+   app-item {
+     width: 80%;
+     max-width: 80%;
+   }
+  }
 }
