@@ -1,24 +1,26 @@
 <ul class="items" *ngFor="let item of items; let i = index">
   <li>
-    
-      
-        <span class="ranking">{{i + 1}}</span>
-        <a class="upvote" href="#"><img src="assets/upvotearrow.gif" alt="upvote"></a>
-      
-      <span class="details">
-        <span class="heading">
-          <h4><a href="#">{{item.title}}</a></h4>
-          <small>(<a href="#">{{item.url}}</a>)</small>
-        </span>
-        
-          <span class="info"
-            >{{item.score}} points by <a href="#">{{item.by.id}}</a><a href="#">17 hours ago</a> |
-            <a href="#">hide</a> |
-            <a class="comments" href="#">{{item.kids.length}} comments</a>
-            </span
-          >
-       
+    <span class="ranking">{{ i + 1 }}</span>
+    <a class="upvote" href="#"
+      ><img src="assets/upvotearrow.gif" alt="upvote"
+    /></a>
+
+    <span class="details">
+      <span class="heading">
+        <h4>
+          <a href="#">{{ item.title }}</a>
+        </h4>
+        <small
+          >(<a href="#">{{ item.url }}</a
+          >)</small
+        >
       </span>
-  
+
+      <span class="info"
+        >{{ item.score }} points by <a href="#">{{ item.by.id }}</a
+        ><a href="#">17 hours ago</a> | <a href="#">hide</a> |
+        <a class="comments" href="#">{{ item.kids.length }} comments</a>
+      </span>
+    </span>
   </li>
 </ul>

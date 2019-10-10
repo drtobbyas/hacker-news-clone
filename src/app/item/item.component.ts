@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Apollo } from 'apollo-angular';
+import { Apollo, QueryRef } from 'apollo-angular';
 import gql from 'graphql-tag';
+import { HnType } from '../types/HnTypes';
 
 @Component({
   selector: 'app-item',
@@ -10,10 +11,12 @@ import gql from 'graphql-tag';
 export class ItemComponent implements OnInit {
   items: any;
   time: any;
+  private query: QueryRef<any>;
+
   constructor(private apollo: Apollo) { }
 
   ngOnInit() {
-    this.apollo
+    this.query = this.apollo
     .watchQuery({
       query: gql `
       {
@@ -36,8 +39,10 @@ export class ItemComponent implements OnInit {
       }
           
       `
-    }).valueChanges.subscribe(result => {
+    });
+    this.query.valueChanges.subscribe(result => {
       this.items = result.data && result.data.hn.topStories;
+      
       // const date = new Date(this.items.time);
       // const hours = date.getHours();
       // this.time = hours;
@@ -45,6 +50,7 @@ export class ItemComponent implements OnInit {
       console.log(this.items);
     })
   }
+  
 
   
 
