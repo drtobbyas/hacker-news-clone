@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { ItemComponent } from './item/item.component';
 import { HttpClientModule } from "@angular/common/http";
 import { GraphQLModule } from './graphql.module';
+import { shortenUrl } from './pipes/shorten-url.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ItemComponent
+    ItemComponent,
+    shortenUrl,
   ],
   imports: [
     BrowserModule,

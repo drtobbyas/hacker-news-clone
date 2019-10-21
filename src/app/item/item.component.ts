@@ -11,6 +11,7 @@ import { HnType } from '../types/HnTypes';
 export class ItemComponent implements OnInit {
   items: any;
   time: any;
+  url: any;
   private query: QueryRef<any>;
 
   constructor(private apollo: Apollo) { }
@@ -42,7 +43,12 @@ export class ItemComponent implements OnInit {
     });
     this.query.valueChanges.subscribe(result => {
       this.items = result.data && result.data.hn.topStories;
-      
+      // for (let story of this.items) {
+      //   const { url } = story;
+
+      //   const urlSegment = url.split('/');
+      //   this.url = urlSegment[2]
+      // }
       // const date = new Date(this.items.time);
       // const hours = date.getHours();
       // this.time = hours;
